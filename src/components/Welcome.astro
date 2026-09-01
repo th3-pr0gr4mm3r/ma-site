@@ -30,6 +30,7 @@ import "../assets/index.css";
         term.output("1. help - Displays this help message.");
         term.output("2. projects - Lists my projects I've worked on.");
         term.output("3. about - Displays information about me.");
+        term.output("4. exit - Exits the terminal.");
       } else {
         term.output(
           "You didn't type 'help'. You had one instruction. You failed. Goodbye.",
@@ -58,7 +59,11 @@ import "../assets/index.css";
         term.output("1. help - Displays this help message.");
         term.output("2. projects - Lists my projects I've worked on.");
         term.output("3. about - Displays information about me.");
+        term.output("4. exit - Exits the terminal.");
         run();
+      } else if (res2.trim() === "exit") {
+        term.output("Exiting the terminal. o7");
+        term.kill();
       } else {
         term.output(
           "Unknown command. Please type 'help' to see the list of available commands.",
