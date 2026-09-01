@@ -30,7 +30,8 @@ import "../assets/index.css";
         term.output("1. help - Displays this help message.");
         term.output("2. projects - Lists my projects I've worked on.");
         term.output("3. about - Displays information about me.");
-        term.output("4. exit - Exits the terminal.");
+        term.output("4. ai - my thoughts on ai.");
+        term.output("5. exit - Exits the terminal.");
       } else {
         term.output(
           "You didn't type 'help'. You had one instruction. You failed. Goodbye.",
@@ -66,9 +67,23 @@ import "../assets/index.css";
       } else if (res2.trim() === "exit") {
         term.output("Exiting the terminal. o7");
         term.kill();
+      } else if (res2.trim() === "ai") {
+        term.output("My thoughts on AI:");
+        term.output("AI is a poorly defined buzzword and has too many meanings to be summed up into one field. So let's explore each different thing it can mean.");
+        sleep(500);
+        term.output("1. AI as in Machine Learning. Machine Learning is cool. Neural networks are cool. I think that in literal usecases they make lots of sense, like in the medical field or for looking at images for stuff like face recognition, and ANPR systems. It's really helpful.");
+        sleep(500);
+        term.output("2. AI as in LLMs. Less so. It's useful in some cases, I love using Copilot in my VSCode editor as an autocomplete. But I think that LLMs are overhyped and overused. I think that they are a tool, not a replacement for human intelligence. They are not sentient, they are not conscious, they are not alive. They are just a tool.");
+        sleep(500);
+        term.output("LLMs are also overtrusted. They hallucinate. A lot. They make stuff up for no reason and just generally suck at most things, unless very strongly grounded. I have had my copilot autocomplete make up functions that don't exist in anything. It sucks.")
+        sleep(500);
+        term.output("3. AIs in agents. Automating your life with AI seems like a really easy way to end up in a lot of trouble. Vibe coding, also stupid IMO. To be a responsible dev you have to check its work which makes it harder than just programming it yourself. It's a solution in search of a problem and I hate it.");
+        sleep(500);
+        term.output("I am known as th3-pr0gr4mm3r. A programmer. Who programs. With code. NOT AI. o7");
+        run();
       } else {
         term.output(
-          "Unknown command. Please type 'help' to see the list of available commands.",
+          "Unknown command. Either you can't read or you tyop'd it. Either way, I'm not a magician or a LLM. Please type 'help' to see the list of available commands.",
         );
         run();
       }
