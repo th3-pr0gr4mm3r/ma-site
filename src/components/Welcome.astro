@@ -52,6 +52,13 @@ import "../assets/index.css";
         term.output(
           "Sup! I'm Thomas, a student software developer with (some) experience in web development. Occasionally, stuff I write actually works. Usually, it kinda works and sometimes it just doesn't work at all ¯\\_(ツ)_/¯.",
         );
+        run();
+      } else if (res2.trim() === "help") {
+        term.output("Here are the available commands:");
+        term.output("1. help - Displays this help message.");
+        term.output("2. projects - Lists my projects I've worked on.");
+        term.output("3. about - Displays information about me.");
+        run();
       } else {
         term.output(
           "Unknown command. Please type 'help' to see the list of available commands.",
